@@ -1,54 +1,74 @@
-* {
+/* CSS VARIABLES */
+:root {
+    /* COLORS */
+    --White: hsl(0, 0%, 100%);
+    --Slate-300: hsl(212, 45%, 89%);
+    --Slate-500: hsl(216, 15%, 48%);
+    --Slate-900: hsl(218, 44%, 22%);
+
+    /* FONT */
+    --Outfit: "Outfit", sans-serif;
+}
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
     margin: 0;
-    padding: 0;
-    font-family: "Outfit", serif;
     box-sizing: border-box;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    width: 288px;
+    border-radius: 10px;
+}
+
+/* QR CONTENT */
 body {
-    background-color: rgb(213, 225, 239);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background-color: var(--Slate-300);
 }
 
-.main-container {
-    background-color: white;
-    margin: auto 0px;
-    max-width: 320px;
-    max-height: 499px;
-    padding: 16px 16px 40px;
-    border-radius: 20px;
-}
-
-.main-container img {
-    max-width: 288px;
-    max-height: 288px;
-    border-radius: 10px;
-    margin-bottom: 24px;
-}
-
-.sub-container {
-    text-align: center;
+.qr-wrapper {
     display: flex;
     flex-direction: column;
-    max-height: 131px;
-    padding: 0px 16px;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    width: 320px;
+    border-radius: 20px;
+    padding: 0 16px;
+    padding-top: 16px;
 }
 
-.preset1 {
-    font-weight: 700;
+.qr-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-text-content>h1,
+.qr-text-content>p {
+    font-family: var(--Outfit);
+}
+
+.qr-text-content>h1 {
     font-size: 22px;
-    line-height: 120%;
-    color: rgb(31, 49, 79);
-    margin-bottom: 16px;
+    color: var(--Slate-900);
+    font-weight: 700;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    width: 288px;
 }
 
-.preset2 {
+.qr-text-content>p {
+    color: var(--Slate-500);
     font-size: 15px;
-    font-weight: 400;
-    line-height: 140%;
-    letter-spacing: 0.2px;
-    color: rgb(104, 119, 141);
+    padding-bottom: 40px;
+    width: 256px;
 }
